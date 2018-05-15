@@ -11,3 +11,4 @@ I am Sharing some screenshots of the app.<br><br>
 <img src="https://github.com/vikashumain/TaskReminder/blob/master/Screenshot_2018-01-08-17-33-50-253_com.taskreminder.png"><br><br>
 <img src="https://github.com/vikashumain/TaskReminder/blob/master/Screenshot_2018-01-08-17-34-01-566_com.taskreminder.png">
 
+# DiabetesMgnt
