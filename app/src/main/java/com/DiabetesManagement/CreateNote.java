@@ -47,15 +47,15 @@ public class CreateNote extends AppCompatActivity {
         mDbHelper = new DbHelper(this);
         db = mDbHelper.getWritableDatabase();
 
-        mTitleText = (EditText) findViewById(R.id.txttitle);
-        mDescriptionText = (EditText) findViewById(R.id.description);
-        mSpinner = (Spinner) findViewById(R.id.spinnerNoteType);
-        pickerDate = (DatePicker) findViewById(R.id.datePicker);
-        pickerTime = (TimePicker) findViewById(R.id.timePicker);
-        time = (TextView) findViewById(R.id.txtTime);
-        date = (TextView) findViewById(R.id.txtDate);
-        checkBoxAlarm = (CheckBox) findViewById(R.id.checkBox);
-        checkboxnotify = (CheckBox) findViewById(R.id.checkBox2);
+        mTitleText = findViewById(R.id.txttitle);
+        mDescriptionText = findViewById(R.id.description);
+        mSpinner = findViewById(R.id.spinnerNoteType);
+        pickerDate = findViewById(R.id.datePicker);
+        pickerTime = findViewById(R.id.timePicker);
+        time = findViewById(R.id.txtTime);
+        date = findViewById(R.id.txtDate);
+        checkBoxAlarm = findViewById(R.id.checkBox);
+        checkboxnotify = findViewById(R.id.checkBox2);
 
 
         pickerDate.setVisibility(View.INVISIBLE);
@@ -155,10 +155,10 @@ public class CreateNote extends AppCompatActivity {
                 String detail = mDescriptionText.getText().toString();
                 String type =  mSpinner.getSelectedItem().toString();
                 ContentValues cv = new ContentValues();
-                cv.put(mDbHelper.TITLE, title);
-                cv.put(mDbHelper.DETAIL, detail);
-                cv.put(mDbHelper.TYPE, type);
-                cv.put(mDbHelper.TIME, getString(R.string.Not_Set));
+                cv.put(DbHelper.TITLE, title);
+                cv.put(DbHelper.DETAIL, detail);
+                cv.put(DbHelper.TYPE, type);
+                cv.put(DbHelper.TIME, getString(R.string.Not_Set));
 
                 if (checkBoxAlarm.isChecked()){
                     Calendar calender = Calendar.getInstance();
@@ -184,8 +184,8 @@ public class CreateNote extends AppCompatActivity {
                     PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
 
                     alarmMgr.set(AlarmManager.RTC_WAKEUP, calender.getTimeInMillis(), pendingIntent);
-                    cv.put(mDbHelper.TIME, timeString);
-                    cv.put(mDbHelper.DATE, dateString);
+                    cv.put(DbHelper.TIME, timeString);
+                    cv.put(DbHelper.DATE, dateString);
                 }
                 else if(checkboxnotify.isChecked()){
                     Calendar calender = Calendar.getInstance();
@@ -213,10 +213,10 @@ public class CreateNote extends AppCompatActivity {
                     PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
 
                     alarmMgr.set(AlarmManager.RTC_WAKEUP, calender.getTimeInMillis(), pendingIntent);
-                    cv.put(mDbHelper.TIME, timeString);
-                    cv.put(mDbHelper.DATE, dateString);
+                    cv.put(DbHelper.TIME, timeString);
+                    cv.put(DbHelper.DATE, dateString);
                 }
-                db.insert(mDbHelper.TABLE_NAME, null, cv);
+                db.insert(DbHelper.TABLE_NAME, null, cv);
 
                 Intent openMainScreen = new Intent(this, MainActivity.class);
                 openMainScreen.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

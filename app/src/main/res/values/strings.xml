@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 
-    <resources>
+<resources>
 
-    <string name="app_name">Task Reminder</string>
+    <string name="app_name">Diabetes Management</string>
+    <string name="weekly_diet_chart">Weekly Diet Chart</string>
+    <string name="weekly_exercise_chart">Weekly Exercise Chart</string>
 
     <string name="hello_world">Hello world!</string>
 
@@ -17,14 +19,14 @@
 
     <string-array name="note_type">
 
-    <item>Normal</item>
+        <item>Normal</item>
 
-    <item>Standard</item>
+        <item>Standard</item>
 
-    <item>Urgent</item>
-    <item>Notify</item>
+        <item>Urgent</item>
+        <item>Notify</item>
 
-</string-array>
+    </string-array>
 
     <string name="title_activity_information">Information</string>
 

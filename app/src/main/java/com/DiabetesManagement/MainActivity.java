@@ -26,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle("Task Reminder");
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blue)));
-        list = (ListView)findViewById(R.id.commentlist);
-        floatingActionButton=(FloatingActionButton)findViewById(R.id.fab);
+        getSupportActionBar().setTitle("Medication Plan and Reminder");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.colorPrimaryDark)));
+        list = findViewById(R.id.commentlist);
+        floatingActionButton= findViewById(R.id.fab);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,13 +39,13 @@ public class MainActivity extends AppCompatActivity {
         });
         mDbHelper = new DbHelper(this);
         db= mDbHelper.getWritableDatabase();
-        final ImageView alarmImage = (ImageView) findViewById(R.id.alarmImage);
+        final ImageView alarmImage = findViewById(R.id.alarmImage);
 
-        String[] from = {mDbHelper.TITLE, mDbHelper.DETAIL, mDbHelper.TYPE, mDbHelper.TIME, mDbHelper.DATE};
-        final String[] column = {mDbHelper.C_ID, mDbHelper.TITLE, mDbHelper.DETAIL, mDbHelper.TYPE, mDbHelper.TIME, mDbHelper.DATE};
+        String[] from = {DbHelper.TITLE, DbHelper.DETAIL, DbHelper.TYPE, DbHelper.TIME, DbHelper.DATE};
+        final String[] column = {DbHelper.C_ID, DbHelper.TITLE, DbHelper.DETAIL, DbHelper.TYPE, DbHelper.TIME, DbHelper.DATE};
         int[] to = {R.id.title, R.id.Detail, R.id.type, R.id.time, R.id.date};
 
-        final Cursor cursor = db.query(mDbHelper.TABLE_NAME, column, null, null ,null, null, null);
+        final Cursor cursor = db.query(DbHelper.TABLE_NAME, column, null, null ,null, null, null);
         final SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.list_entry, cursor, from, to, 0);
 
         list.setAdapter(adapter);
@@ -63,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        moveTaskToBack(true);
+        startActivity(new Intent(getApplicationContext(),HomeActivity.class));
+        finish();
     }
 
     @Override
