@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.ticket.dell.refds.MainActivity">
+    android:background="@color/orangish"
+
+    tools:context=".MainActivity">
 
    <ListView
        android:layout_width="match_parent"
