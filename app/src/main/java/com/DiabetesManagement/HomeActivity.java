@@ -35,8 +35,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         btncharts.setOnClickListener(this);
 
         btnexit.setOnClickListener(this);
+<<<<<<< HEAD
         btnexercise.setOnClickListener(this);
         btnrss.setOnClickListener(this);
+=======
+>>>>>>> 7f3d522fd568b7da9ed4d38fe5e65038ff9c498e
 
 
 
@@ -47,16 +50,23 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     {
         switch(v.getId()) {
             case R.id.btnmedicstion:
+<<<<<<< HEAD
                 finish();
+=======
+>>>>>>> 7f3d522fd568b7da9ed4d38fe5e65038ff9c498e
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
                 break;
             case R.id.btncharts:
+<<<<<<< HEAD
                 finish();
+=======
+>>>>>>> 7f3d522fd568b7da9ed4d38fe5e65038ff9c498e
                 startActivity(new Intent(getApplicationContext(),ViewGraph.class));
 
                 break;
 
+<<<<<<< HEAD
             case R.id.btnexercise:
                 finish();
                 startActivity(new Intent(getApplicationContext(),ExerciseActivity.class));
@@ -69,6 +79,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
+=======
+>>>>>>> 7f3d522fd568b7da9ed4d38fe5e65038ff9c498e
             case R.id.btnexit:
                 finish();
 

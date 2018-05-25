@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.DiabetesManagement">
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" />
+=======
+>>>>>>> 7f3d522fd568b7da9ed4d38fe5e65038ff9c498e
 
     <application
         android:allowBackup="true"
@@ -48,6 +51,7 @@
             android:theme="@android:style/Theme.Dialog" />
         <activity android:name=".ViewGraph" />
         <activity android:name=".MainActivity" />
+<<<<<<< HEAD
         <activity
             android:name=".ExerciseActivity"
             android:parentActivityName=".MainActivity"></activity>
@@ -100,6 +104,8 @@
             <!-- LOCKS THE ORIENTATION AND THE KEYBOARD -->
         </activity>
         <activity android:name=".RssNewsActivity"></activity>
+=======
+>>>>>>> 7f3d522fd568b7da9ed4d38fe5e65038ff9c498e
     </application>
 
 </manifest>

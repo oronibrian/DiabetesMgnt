@@ -96,7 +96,22 @@
         android:orientation="horizontal">
 
         <Button
+<<<<<<< HEAD
             android:layout_width="150dp"
+=======
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/btnsetting"
+            android:background="@drawable/circle"
+            android:drawableTop="@drawable/setting"
+            android:paddingTop="20dp"
+            android:text="@string/action_settings"
+            android:textColor="#fff" />
+
+
+        <Button
+            android:layout_width="100dp"
+>>>>>>> 7f3d522fd568b7da9ed4d38fe5e65038ff9c498e
             android:layout_height="100dp"
             android:id="@+id/btnexit"
             android:layout_marginLeft="10dp"
