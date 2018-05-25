@@ -36,6 +36,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         btnexit.setOnClickListener(this);
         btnexercise.setOnClickListener(this);
+        btnrss.setOnClickListener(this);
 
 
 
@@ -59,6 +60,13 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnexercise:
                 finish();
                 startActivity(new Intent(getApplicationContext(),ExerciseActivity.class));
+                break;
+
+
+            case R.id.btnrss:
+                startActivity(new Intent(getApplicationContext(),RssNewsActivity.class));
+                break;
+
 
 
             case R.id.btnexit:

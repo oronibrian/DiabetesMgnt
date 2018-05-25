@@ -39,13 +39,14 @@ public class MenuActivity extends ListActivity {
            case 0:{
                //home
                finish(); //finish the activity (MenuActivity) and come back to the mainActivity
-               Intent intent = new Intent(MenuActivity.this, MainActivity.class);
+               Intent intent = new Intent(MenuActivity.this, HomeActivity.class);
                startActivity(intent);
             break;
            }
            case 1:{
             //statistics
                //create and call a new activity using intent
+                finish();
                Intent intent = new Intent(MenuActivity.this, StatisticsActivity.class);
                startActivity(intent);
                break;
@@ -53,6 +54,7 @@ public class MenuActivity extends ListActivity {
            case 2:{
                //format data
                //create and call a new activity using intent
+                finish();
                Intent intent = new Intent(MenuActivity.this, FormatData.class);
                startActivity(intent);
                break;

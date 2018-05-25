@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.DiabetesManagement">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -47,10 +48,58 @@
             android:theme="@android:style/Theme.Dialog" />
         <activity android:name=".ViewGraph" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".ExerciseListActivity" />
-        <activity android:name=".AddExerciseActivity" />
-        <activity android:name=".AddExerciseToRoutine" />
-        <activity android:name=".ExerciseActivity"></activity>
+        <activity
+            android:name=".ExerciseActivity"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".AddExerciseToRoutine"
+            android:configChanges="keyboardHidden"
+            android:label="AddExerciseToRoutine"
+            android:screenOrientation="portrait">
+
+            <!-- LOCKS THE ORIENTATION AND THE KEYBOARD -->
+        </activity>
+        <activity
+            android:name=".RegisterNewActivity"
+            android:configChanges="keyboardHidden"
+            android:label="RegisterNewActivity"
+            android:screenOrientation="portrait">
+
+            <!-- LOCKS THE ORIENTATION AND THE KEYBOARD -->
+        </activity>
+        <activity
+            android:name=".FormatData"
+            android:configChanges="keyboardHidden"
+            android:label="@string/title_activity_format_data"
+            android:screenOrientation="portrait">
+
+            <!-- LOCKS THE ORIENTATION AND THE KEYBOARD -->
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:configChanges="keyboardHidden"
+            android:label="@string/title_activity_about"
+            android:screenOrientation="portrait">
+
+            <!-- LOCKS THE ORIENTATION AND THE KEYBOARD -->
+        </activity>
+        <activity
+            android:name=".MenuActivity"
+            android:configChanges="keyboardHidden"
+            android:label="@string/title_activity_menu"
+            android:screenOrientation="portrait">
+
+            <!-- LOCKS THE ORIENTATION AND THE KEYBOARD -->
+        </activity>
+        <activity
+            android:name=".StatisticsActivity"
+            android:configChanges="keyboardHidden"
+            android:label="@string/title_activity_statistics"
+            android:screenOrientation="portrait">
+
+            <!-- LOCKS THE ORIENTATION AND THE KEYBOARD -->
+        </activity>
+        <activity android:name=".RssNewsActivity"></activity>
     </application>
 
 </manifest>

@@ -28,14 +28,14 @@ public class RegisterNewActivity extends Activity implements AdapterView.OnItemS
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_new_activity);
-        txt_load = (EditText) findViewById(R.id.t_load);
-        txt_repetition = (EditText) findViewById(R.id.t_repetition);
+        txt_load = findViewById(R.id.t_load);
+        txt_repetition = findViewById(R.id.t_repetition);
         //set the default keyboard to be the numerical
         txt_load.setRawInputType(InputType.TYPE_CLASS_NUMBER);
         txt_repetition.setRawInputType(InputType.TYPE_CLASS_NUMBER);
 
 
-        spinner = (Spinner) findViewById(R.id.spinnerExerciseList);
+        spinner = findViewById(R.id.spinnerExerciseList);
         loadSpinnerData(); //load spinner data
     }
 
@@ -130,11 +130,11 @@ public class RegisterNewActivity extends Activity implements AdapterView.OnItemS
             dialog.setContentView(R.layout.dialog_box);
 
             // set the custom dialog components - text and button
-            TextView text = (TextView) dialog.findViewById(R.id.txtDiaTitle);
+            TextView text = dialog.findViewById(R.id.txtDiaTitle);
             text.setText(R.string.alert);
-            TextView image = (TextView) dialog.findViewById(R.id.txtDiaMsg);
+            TextView image = dialog.findViewById(R.id.txtDiaMsg);
             image.setText(R.string.alert_blank_load);
-            Button dialogButton = (Button) dialog.findViewById(R.id.btnOk);
+            Button dialogButton = dialog.findViewById(R.id.btnOk);
             // if button is clicked, close the custom dialog
             dialogButton.setOnClickListener(new View.OnClickListener() {
 
@@ -152,11 +152,11 @@ public class RegisterNewActivity extends Activity implements AdapterView.OnItemS
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.setContentView(R.layout.dialog_box);
             // set the custom dialog components - text and button
-            TextView text = (TextView) dialog.findViewById(R.id.txtDiaTitle);
+            TextView text = dialog.findViewById(R.id.txtDiaTitle);
             text.setText(R.string.alert);
-            TextView image = (TextView) dialog.findViewById(R.id.txtDiaMsg);
+            TextView image = dialog.findViewById(R.id.txtDiaMsg);
             image.setText(R.string.alert_blank_rep);
-            Button dialogButton = (Button) dialog.findViewById(R.id.btnOk);
+            Button dialogButton = dialog.findViewById(R.id.btnOk);
             // if button is clicked, close the custom dialog
             dialogButton.setOnClickListener(new View.OnClickListener() {
 
@@ -180,11 +180,11 @@ public class RegisterNewActivity extends Activity implements AdapterView.OnItemS
             final Dialog dialog = new Dialog(RegisterNewActivity.this);
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.setContentView(R.layout.dialog_box);
-            TextView text = (TextView) dialog.findViewById(R.id.txtDiaTitle);
+            TextView text = dialog.findViewById(R.id.txtDiaTitle);
             text.setText(R.string.alert);
-            TextView image = (TextView) dialog.findViewById(R.id.txtDiaMsg);
+            TextView image = dialog.findViewById(R.id.txtDiaMsg);
             image.setText(R.string.alert_activity_added);
-            Button dialogButton = (Button) dialog.findViewById(R.id.btnOk);
+            Button dialogButton = dialog.findViewById(R.id.btnOk);
             // if button is clicked, close the custom dialog
             dialogButton.setOnClickListener(new View.OnClickListener() {
                 @Override

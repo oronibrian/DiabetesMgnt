@@ -5,7 +5,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".RegisterNewActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/orangish">
 
     <include layout="@layout/common_layout"
         android:id="@+id/include" />

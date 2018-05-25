@@ -2,7 +2,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="#A9E2F3">
+    android:background="@color/orangish"
+
+    >
 
     <TextView
         android:id="@+id/txtDiaTitle"
@@ -18,7 +20,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dip"
-        android:background="@color/orangish"
+        android:background="@color/blue"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         />

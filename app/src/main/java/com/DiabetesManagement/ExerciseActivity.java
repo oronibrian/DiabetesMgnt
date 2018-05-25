@@ -41,7 +41,7 @@ public class ExerciseActivity extends AppCompatActivity {
     }
     //click on the register button
     public void registerActivityClick(View view){
-        Intent intent = new Intent(ExerciseActivity.this, RegisterNewActivity.class);
+        Intent intent = new Intent(getApplicationContext(), RegisterNewActivity.class);
         startActivity(intent);
     }
 
@@ -50,7 +50,7 @@ public class ExerciseActivity extends AppCompatActivity {
      * Method that allows the invocation of the menu in this activity
      */
     public void clickIconMenu(View view){
-        Intent intent = new Intent(ExerciseActivity.this, MenuActivity.class);
+        Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
         startActivity(intent);
     }
 }
